@@ -7,17 +7,9 @@ import Foundation
 var fruitsA: Set<String> = ["Apple", "Peach"]
 var fruitsB: Set<String> = ["Apple", "Pineapple"]
 
-var uniqueClosure: (Set<String>, Set<String>) -> Set<String> = { arr1, arr2 in
-    arr1.union(arr2)
-}
-
-var intersecClosure: (Set<String>, Set<String>) -> Set<String> = { arr1, arr2 in
-    arr1.intersection(arr2)
-}
-
-var differClosure: (Set<String>, Set<String>) -> Set<String> = { arr1, arr2 in
-    arr1.symmetricDifference(arr2)
-}
+var uniqueClosure:   (Set<String>, Set<String>) -> Set<String> = { $0.union($1) }
+var intersecClosure: (Set<String>, Set<String>) -> Set<String> = { $0.intersection($1) }
+var differClosure:   (Set<String>, Set<String>) -> Set<String> = { $0.symmetricDifference($1) }
 
 func printFruirs(title: String ,arr1: Set<String>, arr2: Set<String>, action: (Set<String>, Set<String>) -> Set<String>) {
     var result = action(arr1, arr2)
