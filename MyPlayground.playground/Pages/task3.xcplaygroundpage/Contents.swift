@@ -7,9 +7,7 @@ import Foundation
 func sumOfUniqueSquares(_ arr: [Int] ) {
     var uniques = Set(arr)
     
-    let doubledNums = uniques.map { num in
-        num * num
-    }
+    let doubledNums = uniques.map { $0 * $0 }
     
     let sum = doubledNums.reduce(0) { $0 + $1 }
     

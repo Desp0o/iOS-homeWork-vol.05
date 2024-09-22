@@ -4,6 +4,4 @@ import UIKit
 
 var fruits = ["Mango", "Pineapple", "Papaya", "Coconut", "Passionfruit"];
 
-fruits.forEach { fruit in
-    print(fruit)
-}
+fruits.forEach { print($0) }

@@ -16,9 +16,7 @@ func printFruirs(title: String ,arr1: Set<String>, arr2: Set<String>, action: (S
     
     print("\(title):")
     
-    result.forEach { fruit in
-        print(fruit)
-    }
+    result.forEach { print($0) }
     
     print("\n")
 }
