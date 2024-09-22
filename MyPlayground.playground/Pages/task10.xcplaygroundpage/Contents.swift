@@ -12,11 +12,12 @@ func applyOperations(_ numArray: [Int], _ closureArrays: [(Int) -> Int]) -> [Int
     
     numArray.map { num in
         closureArrays.map { closure in
-           let res =  closure(num)
-            finalResult.append(res)
+           let singleNumResult =  closure(num)
+            finalResult.append(singleNumResult)
         }
     }
     
+    print(finalResult)
     return finalResult
 }
 
