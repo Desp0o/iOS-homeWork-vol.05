@@ -7,7 +7,10 @@ import Foundation
 var optArray: [Int?] = [1, 2, 3, nil, nil, 7]
 
 func processOptionalNumbers(_ arrary: [Int?]) {
-    var myArray = arrary.compactMap { $0 }.map { $0 * 2 }
+    var myArray = arrary
+        .compactMap { $0 }
+        .map { $0 * 2 }
+    
     print(myArray)
 }
 
